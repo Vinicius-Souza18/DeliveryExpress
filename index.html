@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeliveryCompleto - Seu delivery premium</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Delivery<span>Completo</span></div>
+      <ul class="nav-links">
+        <li><a href="#home">Início</a></li>
+        <li><a href="#features">Benefícios</a></li>
+        <li><a href="#products">Cardápio</a></li>
+        <li><a href="#categories">Categorias</a></li>
+        <li><a href="#contact">Contato</a></li>
+        <li class="auth-links">
+          <a href="login.html" id="login-link">Login</a>
+          <span id="user-greeting" style="display: none;"></span>
+          <a href="#" id="logout-link" style="display: none;">Sair</a>
+        </li>
+        <li><a href="#" class="cta-button" id="cart-button">Carrinho (<span class="cart-count">0</span>)</a></li>
+      </ul>
+      <button id="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div id="mobile-menu">
+        <ul>
+          <li><a href="#home">Início</a></li>
+          <li><a href="#features">Benefícios</a></li>
+          <li><a href="#products">Cardápio</a></li>
+          <li><a href="#categories">Categorias</a></li>
+          <li><a href="#contact">Contato</a></li>
+          <li class="auth-links">
+            <a href="login.html" id="mobile-login-link">Login</a>
+            <span id="mobile-user-greeting" style="display: none;"></span>
+            <a href="#" id="mobile-logout-link" style="display: none;">Sair</a>
+          </li>
+          <li><a href="#" class="cta-button" id="mobile-cart-button">Carrinho (<span class="cart-count">0</span>)</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+   <!-- Carrinho Modal -->
+   <div class="cart-modal">
+    <div class="cart-modal-content">
+      <div class="cart-header">
+        <h3>Seu Carrinho</h3>
+        <span class="close-modal">&times;</span>
+      </div>
+      <div class="cart-items"></div>
+      <div class="cart-summary">
+        <div class="cart-total">
+          <span>Total:</span>
+          <span class="total-price">R$ 0,00</span>
+        </div>
+        <button class="checkout-btn">Finalizar Pedido</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Sabor e <span>Qualidade</span> na sua casa</h1>
+      <p>Descubra o melhor da gastronomia com nosso serviço de delivery premium. Pratos exclusivos, ingredientes
+        selecionados e entrega rápida para você aproveitar o melhor da culinária sem sair de casa.</p>
+      <div class="hero-buttons">
+        <a href="#products" class="cta-button">Ver Cardápio</a>
+        <a href="cadastro.html" class="secondary-button">Criar Conta</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="section-title">
+      <h2>Por que escolher o DeliveryCompleto?</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card animate-on-scroll">
+        <div class="feature-icon">
+          <i class="fas fa-utensils"></i>
+        </div>
+        <h3>Qualidade Premium</h3>
+        <p>Ingredientes frescos e selecionados para garantir o melhor sabor em cada prato.</p>
+      </div>
+      <div class="feature-card animate-on-scroll">
+        <div class="feature-icon">
+          <i class="fas fa-truck"></i>
+        </div>
+        <h3>Entrega Rápida</h3>
+        <p>Seu pedido entregue com rapidez e segurança, mantendo a qualidade dos alimentos.</p>
+      </div>
+      <div class="feature-card animate-on-scroll">
+        <div class="feature-icon">
+          <i class="fas fa-mobile-alt"></i>
+        </div>
+        <h3>Pedido Fácil</h3>
+        <p>Faça seu pedido pelo nosso aplicativo ou site de forma simples e rápida.</p>
+      </div>
+      <div class="feature-card animate-on-scroll">
+        <div class="feature-icon">
+          <i class="fas fa-heart"></i>
+        </div>
+        <h3>Clientes Satisfeitos</h3>
+        <p>Mais de 10.000 clientes satisfeitos com nossos serviços e produtos.</p>
+      </div>
+      <div class="feature-card animate-on-scroll">
+        <div class="feature-icon">
+          <i class="fas fa-gift"></i>
+        </div>
+        <h3>Programa de Fidelidade</h3>
+        <p>Acumule pontos a cada pedido e troque por descontos e brindes exclusivos.</p>
+      </div>
+      <div class="feature-card animate-on-scroll">
+        <div class="feature-icon">
+          <i class="fas fa-clock"></i>
+        </div>
+        <h3>Horário Estendido</h3>
+        <p>Funcionamos todos os dias, inclusive feriados, para atender quando você precisar.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products" id="products">
+    <div class="section-title">
+      <h2>Nossos Destaques</h2>
+    </div>
+    <div class="product-carousel">
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://via.placeholder.com/300x200/f8f9fa/d4af37?text=Hambúrguer+Gourmet" alt="Hambúrguer Gourmet">
+        </div>
+        <div class="product-info">
+          <h3>Hambúrguer Gourmet</h3>
+          <p>Blend de carnes nobres, queijo especial e molho da casa.</p>
+          <div class="product-price">R$ 32,90</div>
+          <button class="add-to-cart" 
+                  data-id="1" 
+                  data-name="Hambúrguer Gourmet" 
+                  data-price="32.90">Adicionar ao Carrinho</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://via.placeholder.com/300x200/f8f9fa/d4af37?text=Pizza+Especial" alt="Pizza Especial">
+        </div>
+        <div class="product-info">
+          <h3>Pizza Especial</h3>
+          <p>Massa artesanal, molho caseiro e ingredientes selecionados.</p>
+          <div class="product-price">R$ 49,90</div>
+          <button class="add-to-cart" 
+                  data-id="2" 
+                  data-name="Pizza Especial" 
+                  data-price="49.90">Adicionar ao Carrinho</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://via.placeholder.com/300x200/f8f9fa/d4af37?text=Sushi+Premium" alt="Sushi Premium">
+        </div>
+        <div class="product-info">
+          <h3>Combo Sushi Premium</h3>
+          <p>30 peças de sushi com peixes frescos e ingredientes importados.</p>
+          <div class="product-price">R$ 89,90</div>
+          <button class="addicionar-ao-carrinho" 
+                  data-id="3" 
+                  data-name="Combo Sushi Premium" 
+                  data-price="89.90">Adicionar ao Carrinho</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://via.placeholder.com/300x200/f8f9fa/d4af37?text=Massa+Italiana" alt="Massa Italiana">
+        </div>
+        <div class="product-info">
+          <h3>Massa Italiana</h3>
+          <p>Massa fresca com molho especial e ingredientes importados.</p>
+          <div class="product-price">R$ 42,90</div>
+          <button class="add-to-cart" 
+                  data-id="4" 
+                  data-name="Massa Italiana" 
+                  data-price="42.90">Adicionar ao Carrinho</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://via.placeholder.com/300x200/f8f9fa/d4af37?text=Sobremesa+Gourmet" alt="Sobremesa Gourmet">
+        </div>
+        <div class="product-info">
+          <h3>Sobremesa Gourmet</h3>
+          <p>Sobremesa especial preparada pelo nosso chef pâtissier.</p>
+          <div class="product-price">R$ 24,90</div>
+          <button class="add-to-cart" 
+                  data-id="5" 
+                  data-name="Sobremesa Gourmet" 
+                  data-price="24.90">Adicionar ao Carrinho</button>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-controls">
+      <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+      <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="categories" id="categories">
+    <div class="section-title">
+      <h2>Explore Nossas Categorias</h2>
+    </div>
+    <div class="categories-grid">
+      <div class="category-card">
+        <img src="https://via.placeholder.com/400x300/f8f9fa/d4af37?text=Hambúrgueres" alt="Hambúrgueres">
+        <div class="category-overlay">
+          <h3>Hambúrgueres</h3>
+          <a href="#">Ver opções <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="category-card">
+        <img src="https://via.placeholder.com/400x300/f8f9fa/d4af37?text=Pizzas" alt="Pizzas">
+        <div class="category-overlay">
+          <h3>Pizzas</h3>
+          <a href="#">Ver opções <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="category-card">
+        <img src="https://via.placeholder.com/400x300/f8f9fa/d4af37?text=Sushi" alt="Sushi">
+        <div class="category-overlay">
+          <h3>Sushi</h3>
+          <a href="#">Ver opções <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="category-card">
+        <img src="https://via.placeholder.com/400x300/f8f9fa/d4af37?text=Massas" alt="Massas">
+        <div class="category-overlay">
+          <h3>Massas</h3>
+          <a href="#">Ver opções <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="category-card">
+        <img src="https://via.placeholder.com/400x300/f8f9fa/d4af37?text=Sobremesas" alt="Sobremesas">
+        <div class="category-overlay">
+          <h3>Sobremesas</h3>
+          <a href="#">Ver opções <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="category-card">
+        <img src="https://via.placeholder.com/400x300/f8f9fa/d4af37?text=Bebidas" alt="Bebidas">
+        <div class="category-overlay">
+          <h3>Bebidas</h3>
+          <a href="#">Ver opções <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <div class="section-title">
+      <h2>O que nossos clientes dizem</h2>
+    </div>
+    <div class="testimonial-card animate-on-scroll">
+      <p class="testimonial-text">"O DeliveryCompleto superou todas as minhas expectativas! A comida chegou quente, bem
+        embalada e com um sabor incrível. O hambúrguer gourmet é simplesmente o melhor que já provei. Além disso, o
+        aplicativo é super fácil de usar e o atendimento ao cliente é excelente."</p>
+      <div class="testimonial-author">Mariana Silva</div>
+      <div class="testimonial-role">Cliente desde 2021</div>
+    </div>
+  </section>
+
+  <!-- App Download Section -->
+  <section class="app-download">
+    <div class="app-container">
+      <div class="app-content">
+        <h2>Baixe nosso aplicativo</h2>
+        <p>Tenha o DeliveryCompleto na palma da sua mão. Faça pedidos, acompanhe entregas em tempo real, acumule pontos
+          e aproveite ofertas exclusivas para usuários do aplicativo.</p>
+        <div class="app-buttons">
+          <a href="#" class="app-button">
+            <div class="app-icon"><i class="fab fa-google-play"></i></div>
+            <div class="app-text">
+              <small>Disponível no</small>
+              <span>Google Play</span>
+            </div>
+          </a>
+          <a href="#" class="app-button">
+            <div class="app-icon"><i class="fab fa-apple"></i></div>
+            <div class="app-text">
+              <small>Baixe na</small>
+              <span>App Store</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="app-image">
+        <img src="https://via.placeholder.com/400x600/f8f9fa/d4af37?text=App+DeliveryCompleto"
+          alt="App DeliveryCompleto">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="section-title">
+      <h2>Entre em Contato</h2>
+    </div>
+    <div class="contact-container">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div>
+            <h3>Endereço</h3>
+            <p>Av. Paulista, 1000 - São Paulo, SP</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <div>
+            <h3>Telefone</h3>
+            <p>(11) 1234-5678</p>
+            <p>(11) 98765-4321 (WhatsApp)</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div>
+            <h3>Email</h3>
+            <p>contato@deliverycompleto.com.br</p>
+            <p>sac@deliverycompleto.com.br</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <div>
+            <h3>Horário de Atendimento</h3>
+            <p>Segunda a Sexta: 10h às 22h</p>
+            <p>Sábado e Domingo: 11h às 23h</p>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <form id="contact-form">
+          <div class="form-group">
+            <input type="text" id="contact-name" placeholder="Seu nome" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="contact-email" placeholder="Seu email" required>
+          </div>
+          <div class="form-group">
+            <input type="tel" id="contact-phone" placeholder="Seu telefone">
+          </div>
+          <div class="form-group">
+            <textarea id="contact-message" placeholder="Sua mensagem" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="cta-button">Enviar Mensagem</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="newsletter">
+    <div class="newsletter-container">
+      <h2>Assine nossa newsletter</h2>
+      <p>Receba promoções exclusivas, novidades do cardápio e descontos especiais diretamente no seu email.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Digite seu email" required>
+        <button type="submit" class="cta-button">Assinar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>DeliveryCompleto</h3>
+        <p>O melhor serviço de delivery premium, levando sabor e qualidade até sua casa.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Links Úteis</h3>
+        <ul>
+          <li><a href="#home">Início</a></li>
+          <li><a href="#features">Benefícios</a></li>
+          <li><a href="#products">Cardápio</a></li>
+          <li><a href="#categories">Categorias</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Políticas</h3>
+        <ul>
+          <li><a href="#">Termos de Uso</a></li>
+          <li><a href="#">Política de Privacidade</a></li>
+          <li><a href="#">Política de Entrega</a></li>
+          <li><a href="#">Trocas e Reembolsos</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Atendimento</h3>
+        <ul>
+          <li><i class="fas fa-phone-alt"></i> (11) 1234-5678</li>
+          <li><i class="fas fa-envelope"></i> contato@deliverycompleto.com.br</li>
+          <li><i class="fas fa-map-marker-alt"></i> Av. Paulista, 1000 - São Paulo, SP</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 DeliveryCompleto. Todos os direitos reservados.</p>
+      <div class="payment-methods">
+        <i class="fab fa-cc-visa"></i>
+        <i class="fab fa-cc-mastercard"></i>
+        <i class="fab fa-cc-amex"></i>
+        <i class="fab fa-cc-paypal"></i>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Carrinho Modal -->
+  <div class="cart-modal">
+    <div class="cart-modal-content">
+      <div class="cart-header">
+        <h3>Seu Carrinho</h3>
+        <span class="close-modal">&times;</span>
+      </div>
+      <div class="cart-items"></div>
+      <div class="cart-summary">
+        <div class="cart-total">
+          <span>Total:</span>
+          <span class="total-price">R$ 0,00</span>
+        </div>
+        <button class="checkout-btn">Finalizar Pedido</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
