@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - DeliveryCompleto</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="auth-container">
+    <h2>Login</h2>
+    <form id="login-form">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Senha</label>
+        <input type="password" id="password" required>
+      </div>
+      <button type="submit" class="cta-button">Entrar</button>
+    </form>
+    <p>Não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Simulação de login
+      const user = {
+        name: "Usuário Teste",
+        email: document.getElementById('email').value
+      };
+      
+      localStorage.setItem('user', JSON.stringify(user));
+      alert('Login realizado com sucesso!');
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>
